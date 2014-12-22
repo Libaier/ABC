@@ -8,8 +8,10 @@
 * 支持向量机构造一个超平面或者多个超平面，这些超平面可能是高维的，甚至可能是无限多维的。在分类任务中，它的原理是，将决策面（超平面）放置在这样的一个位置，两类中接近这个位置的点距离的都最远。
 
 ##核心思想
-* Use kernel function to transform low dimensional training samples to higher dim (for linear separability problem)* Use quadratic programming (QP) to find the best classifier boundary hyperplane (for global optima) 
-## 分类
+* Use kernel function to transform low dimensional training samples to higher dim (for linear separability problem)
+* Use quadratic programming (QP) to find the best classifier boundary hyperplane (for global optima) 
+
+## 分类
 * 线性可分支持向量机
 * 线性支持向量机
 * 非线性支持向量机
@@ -17,17 +19,17 @@
 
 ## 线性可分支持向量机
 
-![1](svm_1.png =300x)
+![1](svm_1.png)
 
 ## 线性支持向量机
 
 ###例图
 
-![2](svm_2.png =300x)
+![2](svm_2.png)
 
 ###Hinge loss
 
-![3](svm_3.png =300x)
+![3](svm_3.png)
 
 
 
