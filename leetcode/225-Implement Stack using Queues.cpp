@@ -15,23 +15,35 @@
 
 class Stack {
 public:
+	queue<int> input;
     // Push element x onto stack.
     void push(int x) {
-        
+        input.push(x);
     }
 
     // Removes the element on top of the stack.
     void pop() {
-        
+        queue<int> temp;
+        while(input.size()!=1)
+        {
+        	temp.push(temp.top());
+        	input.pop();
+        }
+        input = temp;
     }
 
     // Get the top element.
     int top() {
-        
+    	queue<int> temp = input;
+        while(temp.size()!=1)
+        {
+        	temp.pop();
+        }
+        return temp.top();
     }
 
     // Return whether the stack is empty.
     bool empty() {
-        
+        return input.empty();
     }
 };
