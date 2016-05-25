@@ -4,7 +4,7 @@ ABC
 
 ##算法
 
-* **leetcode**
+* [**leetcode**](./算法/)
 * **hihocoder**
 * **剑指offer**
 * cheatsheet
