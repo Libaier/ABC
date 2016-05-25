@@ -9,7 +9,7 @@ ABC
 * [**剑指offer**](./算法/剑指offer/)
 * [cheatsheet](./算法/readme.md)
 
-##[C++](./C++/)
+##[C++](./c%2B%2B/)
 
 * 容器类
 * c/c++关键字
