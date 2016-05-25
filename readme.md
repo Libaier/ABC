@@ -1,19 +1,19 @@
 ABC
 =======
-计算机基础知识整理
+计算机基础知识整理，黑体为文件夹
 
 ##算法
 
-* <leetcode>
-* <hihocoder>
-* <剑指offer>
+* **leetcode**
+* **hihocoder**
+* **剑指offer**
 * cheatsheet
 
 ##C++
 
-* <STL>
+* STL
 * 虚函数
-* <变量>
+* 变量
 * 指针
 * c++新特性
 * cheatsheet
