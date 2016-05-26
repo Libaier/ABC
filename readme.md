@@ -1,6 +1,6 @@
 ABC
 =======
-计算机基础知识整理
+算法工程师面试基础知识整理
 
 > [自省原则](http://blog.sina.com.cn/s/blog_4caedc7a0102dytf.html)
 > 
