@@ -8,25 +8,36 @@ public:
     		return result;
     	}
     	int N = matrix[0].size();
-    	for (int i = 0; i < M/2; ++i)
+
+    	int circle = ((M>N?N:M)+1)/2;
+    	for (int i = 0; i < circle; ++i)
     	{
     		for (int j = i; j < N-i; ++j)
     		{
     			result.push_back(matrix[i][j]);
     		}
-    		for (int j = 0; j < M-1-i; ++j)
+
+    		for (int j = i+1; j < M-1-i; ++j)
     		{
-    			result.push_back(matrix[N-1-i][j]);
+    			result.push_back(matrix[j][N-1-i]);
     		}
 
-    		for (int j = N-i; j >i ; --j)
+    		if (M-1-i!=i)
     		{
-    			result.push_back(matrix[i][j]);
+	    		for (int j = N-1-i; j >= i ; --j)
+	    		{
+	    			result.push_back(matrix[M-1-i][j]);
+	    		}
     		}
-    		for (int j = M-1-i; j >i ; --j)
+    		if (N-1-i!=i)
     		{
-    			result.push_back(matrix[i][j]);
+    			for (int j = M-1-i-1; j > i ; --j)
+	    		{
+	    			result.push_back(matrix[j][i]);
+	    		}
     		}
+
     	}
+    	return result;
     }
 };
