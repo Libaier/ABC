@@ -55,15 +55,15 @@ public:
 
 
     //levelOrder leetcode
-    void levelOrderTraversal(TreeNode* root,vector<vector<int>> &result,int depth) {
+    void levelOrderTraversal(TreeNode* root,vector<vector<int>> &result,int level) {
         if (root==NULL) return;
-        if (result.size()==depth)
+        if (result.size()==level)
         {
         	result.push_back(vector<int>());
         }
-        result[depth].push_back(root->val);
-        levelOrderTraversal(root->left,result,depth+1);
-        levelOrderTraversal(root->right,result,depth+1);
+        result[level].push_back(root->val);
+        levelOrderTraversal(root->left,result,level+1);
+        levelOrderTraversal(root->right,result,level+1);
     }
 
     vector<vector<int>> levelOrder(TreeNode* root) {
@@ -74,15 +74,15 @@ public:
 
 
 	//zigzagLevelOrderTraversal
-    void zigzagLevelOrderTraversal(TreeNode* root,vector<vector<int>> &result,int depth) {
+    void zigzagLevelOrderTraversal(TreeNode* root,vector<vector<int>> &result,int level) {
         if (root==NULL) return;
-        if (result.size()==depth)
+        if (result.size()==level)
         {
         	result.push_back(vector<int>());
         }
-        result[depth].push_back(root->val);
-        zigzagLevelOrderTraversal(root->left,result,depth+1);
-        zigzagLevelOrderTraversal(root->right,result,depth+1);
+        result[level].push_back(root->val);
+        zigzagLevelOrderTraversal(root->left,result,level+1);
+        zigzagLevelOrderTraversal(root->right,result,level+1);
 
     }
 
@@ -90,11 +90,11 @@ public:
         vector<vector<int>> result;
         zigzagLevelOrderTraversal(root,result,0);
         
-        for(int depth=0;depth<result.size();depth++)
+        for(int level=0;level<result.size();level++)
         {
-            if (depth&0x1==1&&!result[depth].empty())
+            if (level&0x1==1&&!result[level].empty())
             {
-            	reverse(result[depth].begin(),result[depth].end());
+            	reverse(result[level].begin(),result[level].end());
             }
         }
         return result;  
@@ -102,27 +102,27 @@ public:
 
 
 
-    //verticalOrder leetcode wrong
-    void verticalOrderTraversal(TreeNode* root,map<int,vector<int>> &result,int hdepth) {
-        if (root==NULL) return;
-        result[hdepth].push_back(root->val);
-        verticalOrderTraversal(root->left,result,hdepth-1);
-        verticalOrderTraversal(root->right,result,hdepth+1);
-    }
+    // //verticalOrder leetcode wrong level
+    // void verticalOrderTraversal(TreeNode* root,map<int,vector<int>> &result,int hlevel) {
+    //     if (root==NULL) return;
+    //     result[hlevel].push_back(root->val);
+    //     verticalOrderTraversal(root->left,result,hlevel-1);
+    //     verticalOrderTraversal(root->right,result,hlevel+1);
+    // }
 
-    vector<vector<int>> verticalOrder(TreeNode* root) {
-        map<int,vector<int>> result;
-       	vector<vector<int>> result_v;
-        verticalOrderTraversal(root,result,0);
-        map< int,vector<int> > :: iterator it;
-	    for (it=result.begin(); it!=result.end(); it++)
-	    {
-	        vector<int> resultTemp;
-	        for (int i=0; i<it->second.size(); ++i)
-                resultTemp.push_back(it->second[i]);
-	        result_v.push_back(resultTemp);
-	    }
-        return result_v;  
-    }
+    // vector<vector<int>> verticalOrder(TreeNode* root) {
+    //     map<int,vector<int>> result;
+    //    	vector<vector<int>> result_v;
+    //     verticalOrderTraversal(root,result,0);
+    //     map< int,vector<int> > :: iterator it;
+	   //  for (it=result.begin(); it!=result.end(); it++)
+	   //  {
+	   //      vector<int> resultTemp;
+	   //      for (int i=0; i<it->second.size(); ++i)
+    //             resultTemp.push_back(it->second[i]);
+	   //      result_v.push_back(resultTemp);
+	   //  }
+    //     return result_v;  
+    // }
 
 };
