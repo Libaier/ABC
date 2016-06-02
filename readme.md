@@ -4,7 +4,7 @@ ABC
 
 ##[算法](./算法/)
 
-* 算法模版
+* [**算法模版**](./算法/算法模版/)
 * [**leetcode**](./算法/leetcode/)
 * [**hihocoder**](./算法/hihocoder/)
 * [**剑指offer**](./算法/剑指offer/)
