@@ -3,7 +3,7 @@
 #include <iostream>
 #include "brass.h"
 
-int main()
+int main1()
 {
     using std::cout;
     using std::endl;
@@ -23,6 +23,6 @@ int main()
     cout << "Withdrawing $4200 from the Hogg Account:\n";
     Hoggy.Withdraw(4200.00);
     Hoggy.ViewAcct();
-	// std::cin.get();
+	std::cin.get();
     return 0; 
 }

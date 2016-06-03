@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include "brass.h"
-const int CLIENTS = 4;
+const int CLIENTS = 2;
 
 int main()
 {
@@ -56,7 +56,8 @@ int main()
    {
        delete p_clients[i];  // free memory
    }
-   cout << "Done.\n";         
+   cout << "Done.\n";    
+   std::cin.get();
  /* code to keep window open 
    if (!cin)
       cin.clear();
