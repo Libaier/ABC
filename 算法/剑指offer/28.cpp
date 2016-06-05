@@ -22,6 +22,7 @@ public:
         {
             return result;
         }
+        sort(str.begin(),str.end());
         set<string> result_set;
         getPermutation(str,0,result_set);
         for (std::set<string>::iterator i = result_set.begin(); i != result_set.end(); ++i)
