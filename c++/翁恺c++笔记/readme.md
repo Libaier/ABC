@@ -77,25 +77,57 @@
     	delete[] a;//出错,查表删除，发现表中不存在a所指地址
 #5.2访问限制
 *	public
-*	private 是对类的，不是对象的
-*	protected
+*	private 是对类的，不是对对象的，且只在编译时刻检查
+	
+	    class MyClass12
+	    {
+		    public:
+				MyClass12()
+		    	{
+		    	}
+		    	void fun(int i){
+		    		a = i;
+		    	}
+		    	void fun1(MyClass12* i){
+		    		cout << i->a<<endl;//可以访问
+		    	}
+		    	~MyClass12(){
+		    		cout << a<<endl;
+		    	}	
+			private:
+		    	int a;
+	    };
+* friends声明为friend，别人可以访问你的
+* protected
 
-    class MyClass12
-    {
-    public:
-    	MyClass12()
-    	{
-    	}
-    	void fun(int i){
-    		a = i;
-    	}
-    	void fun1(MyClass12* i){
-    		cout << i->a<<endl;
-    	}
-    	~MyClass12(){
-    		cout << a<<endl;
-    	}
-    private:
-    	int a;
-    };
-*
+*	class VS struct
+	*	class 默认private
+	*	struct默认public
+	*	最好首选class，如果只是变量的组合用struct
+
+5.3 初始化列表
+* 初始化列表早于构造函数内程序执行，如果在构造函数里则是先初始化在赋值
+* 可以用来初始化成员变量
+
+
+6.1 对象组合(用对象制造出一个新的)
+
+* 对象组合是一种软件重用的方法
+	* fully
+	* by reference
+
+6.2 继承inheritance(用类制造出来一个新的)
+* 允许共享成员变量，成员函数，接口
+* 当一个子类继承父类后，那么就获得了父类所有的东西。
+
+6.3子类父类关系
+* 子类中与父类重载函数同名的函数，与父类的函数没有关系，因此会隐藏父类的所有重载函数，想要调用父类中的函数的方法是B.A::print(200)；
+	* 只有c++有这种机制
+	* [重载VS覆盖VS隐藏](http://www.cnblogs.com/qlee/archive/2011/07/04/2097055.html)
+
+6.4函数重载与默认参数
+* 函数返回值类型不同不构成重载
+* 函数default value 是编译时的动作，编译器替你补上缺少的参数。尽量不要使用default value
+
+6.5内联函数
+* 

@@ -78,6 +78,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="11.cpp" />
+    <ClCompile Include="12.cpp" />
+    <ClCompile Include="16.cpp" />
     <ClCompile Include="8.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

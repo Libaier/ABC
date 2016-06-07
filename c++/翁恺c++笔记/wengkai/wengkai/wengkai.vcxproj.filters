@@ -18,5 +18,14 @@
     <ClCompile Include="8.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

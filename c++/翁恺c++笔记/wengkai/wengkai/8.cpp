@@ -16,7 +16,7 @@ public:
 	int a;
 };
 
-void main()
+void main8()
 {
 
 	MyClass8 m;
