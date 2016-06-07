@@ -70,3 +70,32 @@
 * 空间是在进入大括号时分配，构造函数是在调用时才运行的
 
 #5.1new delete
+* delete VS delete[]
+
+	    int *a = new int[10];
+    	a++;
+    	delete[] a;//出错,查表删除，发现表中不存在a所指地址
+#5.2访问限制
+*	public
+*	private 是对类的，不是对象的
+*	protected
+
+    class MyClass12
+    {
+    public:
+    	MyClass12()
+    	{
+    	}
+    	void fun(int i){
+    		a = i;
+    	}
+    	void fun1(MyClass12* i){
+    		cout << i->a<<endl;
+    	}
+    	~MyClass12(){
+    		cout << a<<endl;
+    	}
+    private:
+    	int a;
+    };
+*
