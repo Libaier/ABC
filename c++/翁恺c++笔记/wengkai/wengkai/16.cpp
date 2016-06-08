@@ -33,10 +33,13 @@ public:
 };
 
 
-void main()
+void main16()
 {
+	//const int ci = 5;
+	//int *p = &ci;//error
 	MyClass16a m;
 	m.fun();
 	m.MyClass16::fun(1);
 	getchar();
+
 }
