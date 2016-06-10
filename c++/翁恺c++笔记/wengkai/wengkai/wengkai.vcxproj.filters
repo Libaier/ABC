@@ -30,5 +30,23 @@
     <ClCompile Include="20_const.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="27_copy_constructor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="28_static_1.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="28_static_1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="28_static_2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="29_static.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="30_operator_overload.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

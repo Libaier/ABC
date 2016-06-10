@@ -82,6 +82,12 @@
     <ClCompile Include="12.cpp" />
     <ClCompile Include="16.cpp" />
     <ClCompile Include="20_const.cpp" />
+    <ClCompile Include="27_copy_constructor.cpp" />
+    <ClCompile Include="28_static_1.c" />
+    <ClCompile Include="28_static_1.h" />
+    <ClCompile Include="28_static_2.c" />
+    <ClCompile Include="29_static.cpp" />
+    <ClCompile Include="30_operator_overload.cpp" />
     <ClCompile Include="8.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

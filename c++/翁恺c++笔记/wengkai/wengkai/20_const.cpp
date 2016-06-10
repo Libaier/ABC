@@ -6,6 +6,7 @@ public:
 	//const size = 1;//error
 	enum {size = 1};//correct
 	int b[size];
+	//MyClass20(MyClass20 a) :a(1){}
 
 	MyClass20() :a(1){}
 	void fun()
@@ -23,7 +24,7 @@ private:
 	const int a ;
 };
 
-void main()
+void main20()
 {
 	int x[2] = { 1,1 };
 	int(&z)[2] = x;

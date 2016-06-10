@@ -1,10 +1,10 @@
 static 
-隐藏，持久存储
 
-##c static
+
+##[c static(访问型受局限，持久存储)](http://bbs.csdn.net/topics/350238100)
 * 函数内 static变量其实就是全局变量，只是只能在函数内访问
-* static 全局变量，其他文件加上extern也没法访问
-* static函数？？
+* static全局变量，其他文件加上extern也没法访问
+* static函数只能在这个.c文件中访问
 
 
 ##c++ static
