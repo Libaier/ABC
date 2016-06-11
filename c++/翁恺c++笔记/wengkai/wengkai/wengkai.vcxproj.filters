@@ -48,5 +48,11 @@
     <ClCompile Include="30_operator_overload.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="34_template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="37_excepetion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

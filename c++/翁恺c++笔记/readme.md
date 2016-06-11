@@ -268,6 +268,10 @@
 
 #6.16静态成员
 
+
+
+#6.16操作符重载
+
 * 只有已经有的运算符才能重载；重载运算符不能改变运算符的优先级；重载运算符不能改变操作数的个数；只能在类或枚举类型中重载。
 
 * **const** Integer operator + (**const** Integer& that) **const**{}
@@ -283,3 +287,69 @@
 	* =()[]->->*must做member
 	* 赋值运算符should做member
 	* 所有其他双目运算符都做成非成员的
+
+* 典型的operator的原形：
+	1. +*/%^&|~----const T operatorX(const T&I,const T&r)const;(返回的是新的对象)
+	2. !&&||< <= == >= >-----bool opertorX(const T&I,onst T&r)const;
+	3. []--------T& T ::operator[](int index);（因为要做左值故用引用）
+
+* *++/--？？*
+	*const T& operator++(); ++a：修改a本身，然后进行运算；
+	*const T& operator--(); --a
+	*const T operator++(int);  a++：返回a没有修改时的值，进行运算，再修改a；
+	*const T operator--(int);  a--
+* ==推出!=，>推出<=，>，>=
+* explicit 构造函数不能做隐式了类性转换
+
+
+#6.17 模版Ⅰ
+* function/class template
+#6.18 模版Ⅱ
+
+#6.19 异常
+* 异常示例
+    
+    #include <iostream>
+    using namespace std;
+    
+    void fun()
+    {
+    	throw int(2);//分配在栈上
+		cout << "here" << endl;//不执行到这里
+    }
+    
+    //void swap2<int>();
+    void main()
+    {
+    	try{
+    		fun();
+    	}
+    	catch (int i){//...表示接受所有异常
+    		cout << "exception"<<i << endl;
+    	}
+		cout << "here" << endl;//会执行到这里
+    	getchar();
+    
+    }
+
+* catch顺序
+	* 按照代码顺序 对每一个查找1.exact match 2.base 3....
+
+
+* throw   
+	    void fun (); // 能抛出任何类型的异常
+	    void fun () throw(except1,except2,except3)// 后面括号里面是一个异常参数表，本例中只能抛出这3中异常 
+	    void fun () throw()   // 参数表为空，不能抛出异常
+
+* 在构造函数中抛异常如果不在构造函数中删除this会造成内存泄漏
+
+# 6.17 流的概念
+# 6.18 流的运算符
+*
+
+	    int a;
+    	cin >> hex >> a;//16进制
+    	cout << a;
+    	getchar();
+
+# STL

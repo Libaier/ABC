@@ -7,5 +7,5 @@ funcPtr pfun01 = &hwfun;
 
 void hwfun(void)
 {
-	printf("hello world\n");
+	//printf("hello world\n");
 }
