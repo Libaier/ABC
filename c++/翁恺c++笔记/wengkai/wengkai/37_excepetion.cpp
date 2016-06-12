@@ -14,12 +14,13 @@ private:
 class ex2
 {
 public:
-	ex2(){}
+	ex2(){
+	}
 	~ex2(){}
-
 private:
 
 };
+
 
 void fun()throw(ex1)
 {
