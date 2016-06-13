@@ -197,7 +197,9 @@
     		int x[2] = { 1,1 };
 			int(&z)[2] = x;//正确
 			int&z[2] = x;//错误
+
 #6.9 向上造型
+
 * 子类A 父类B
 	* B = A
 	* B* = A*
@@ -309,29 +311,29 @@
 
 #6.19 异常
 * 异常示例
-    
-    #include <iostream>
-    using namespace std;
-    
-    void fun()
-    {
-    	throw int(2);//分配在栈上
-		cout << "here" << endl;//不执行到这里
-    }
-    
-    //void swap2<int>();
-    void main()
-    {
-    	try{
-    		fun();
-    	}
-    	catch (int i){//...表示接受所有异常
-    		cout << "exception"<<i << endl;
-    	}
-		cout << "here" << endl;//会执行到这里
-    	getchar();
-    
-    }
+
+	    #include <iostream>
+	    using namespace std;
+	    
+	    void fun()
+	    {
+	    	throw int(2);//分配在栈上
+	    	cout << "here" << endl;//不执行到这里
+	    }
+	    
+	    //void swap2<int>();
+	    void main()
+	    {
+	    	try{
+	    		fun();
+	    	}
+	    	catch (int i){//...表示接受所有异常
+	    		cout << "exception"<<i << endl;
+	    	}
+	    	cout << "here" << endl;//会执行到这里
+	    	getchar();
+	    
+	    }
 
 * catch顺序
 	* 按照代码顺序 对每一个查找1.exact match 2.base 3....
@@ -344,8 +346,8 @@
 
 * 在构造函数中抛异常如果不在构造函数中删除this会造成内存泄漏
 
-# 6.17 流的概念
-# 6.18 流的运算符
+# 6.20 流的概念
+# 6.21 流的运算符
 *
 
 	    int a;
@@ -353,4 +355,4 @@
     	cout << a;
     	getchar();
 
-# 6.19 STL
+# 6.22 STL
