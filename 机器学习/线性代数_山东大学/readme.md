@@ -1,3 +1,5 @@
+[中国大学mooc课程链接](http://www.icourse163.org/course/sdu-55001#/info)
+
 线性代数导论一讲。
 
 行列式七讲：
