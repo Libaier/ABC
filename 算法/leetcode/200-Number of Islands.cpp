@@ -30,23 +30,23 @@ private:
 
             if(x > 0 && grid[x - 1][y] == '1')
             {
-                grid[x - 1][y] == '0';
+                grid[x - 1][y] = '0';
                 que.push(make_pair(x - 1,y));
             }    
             
             if(x < grid.size() - 1 && grid[x + 1][y] == '1')
             {
-                grid[x + 1][y] == '0';
+                grid[x + 1][y] = '0';
                 que.push(make_pair(x + 1,y));
             }        
             if(y > 0 && grid[x][y - 1] == '1')
             {
-                grid[x][y - 1] == '0';
+                grid[x][y - 1] = '0';
                 que.push(make_pair(x,y - 1));
             }        
             if(y < grid[0].size() - 1 && grid[x][y + 1] == '1')
             {
-                grid[x][y+1] == '0';
+                grid[x][y+1] = '0';
                 que.push(make_pair(x,y+1));
             }    
         } 
