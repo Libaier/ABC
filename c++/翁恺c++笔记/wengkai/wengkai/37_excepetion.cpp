@@ -29,7 +29,7 @@ void fun()throw(ex1)
 }
 
 //void swap2<int>();
-void main()
+void main37()
 {
 
 	try{

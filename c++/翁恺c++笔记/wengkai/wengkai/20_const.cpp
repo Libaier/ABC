@@ -3,14 +3,23 @@ using namespace std;
 class MyClass20
 {
 public:
-	//const size = 1;//error
-	enum {size = 1};//correct
-	int b[size];
+	int a = 2;//error
+	//enum {size = 1};//correct
+	int b[10];
+	int c;
 	//MyClass20(MyClass20 a) :a(1){}
 
-	MyClass20() :a(1){}
+	MyClass20() :a(4) {
+		//int *a = new int[size];
+		//int c[a];
+		a = 1;
+
+	}
 	void fun()
 	{
+		const int size1 = 1;
+		//enum {size = 1};//correct
+		int b1[size1];
 		cout << "fun" << endl;
 	}
 	void fun() const
@@ -21,16 +30,18 @@ public:
 		cout << a << endl;
 	}
 private:
-	const int a ;
+	
+	//const int a ;
 };
 
-void main20()
+void main()
 {
+
 	int x[2] = { 1,1 };
 	int(&z)[2] = x;
 	//x++;
 	cout << z;
-	const MyClass20 m;
+	MyClass20 m;
 	m.fun();
 	getchar();
 }
