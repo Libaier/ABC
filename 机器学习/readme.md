@@ -15,7 +15,7 @@
 > e.和其他基本方法的对比；
 
 * KNN
-* KMeans
+* [KMeans](./算法笔记和实现/聚类/kmeans)
 * 朴素贝叶斯 
 * Logistic回归
 * 随机森林
