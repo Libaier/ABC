@@ -98,7 +98,7 @@ Comparing different clustering algorithms on toy datasets
 * K-Means can be seen as a special case of Gaussian mixture model with equal covariance per component.
 * K-means is equivalent to the expectation-maximization algorithm with a small, all-equal, diagonal covariance matrix.
 * 这样从K-means里我们可以看出它其实就是EM的体现，E步是确定隐含类别S变量类别，M步更新其他参数$$$\mu$$$中心来使J最小化。这里的隐含类别变量指定方法比较特殊，属于硬指定，从k个类别中硬选出一个给样例，而不是对每个类别赋予不同的概率。总体思想还是一个迭代优化过程，有目标函数，也有参数变量，只是多了个隐含变量，确定其他参数估计隐含变量，再确定隐含变量估计其他参数，直至目标函数最优。
-* K-Means才用了坐标下降法求解，先固定中心，优化类别，再固定类别，优化中心
+* K-Means采用了坐标下降法求解，先固定中心，优化类别，再固定类别，优化中心
 * The algorithm can also be understood through the concept of Voronoi diagrams. 
 
 
@@ -107,8 +107,13 @@ Comparing different clustering algorithms on toy datasets
 * mahout中对K-means的具体[实现](http://mahout.apache.org/users/clustering/k-means-clustering.html)
 * spark Mlib中对K-means的[实现](http://spark.apache.org/docs/latest/mllib-statistics.html)
 
+第一步：Map：对于每一个点，将其分配到最近的聚类中心
 ![](http://i.imgur.com/8XDqvbg.jpg)
+
+第二步：Combine：刚完成map的机器在本机上都分别完成同一个聚类的点的求和，减少reduce操作的通信量和计算量。
 ![](http://i.imgur.com/3yHda1Q.jpg)
+
+第三步：reduce：将同一聚类中心的中间数据再进行求和，得到新的聚类中心。
 ![](http://i.imgur.com/nsc8NCh.jpg)
 
 ##相关算法
@@ -128,3 +133,4 @@ Comparing different clustering algorithms on toy datasets
 5. [基本Kmeans算法介绍及其实现(c++)](http://blog.csdn.net/qll125596718/article/details/8243404)
 6. [清雨的 Data Science 笔记](https://zhuanlan.zhihu.com/p/20432322?refer=TsingJyuData)
 7. [Zhao W, Ma H, He Q. Parallel k-means clustering based on mapreduce\[M\] Cloud Computing. Springer Berlin Heidelberg, 2009: 674-679.](http://www.cs.ucsb.edu/~veronika/MAE/parallelkmeansmapreduce_zhao.pdf)
+8. [基于MapReduce实现并行化K-means算法](http://blog.csdn.net/hewei0241/article/details/8279089)
