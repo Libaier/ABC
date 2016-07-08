@@ -30,3 +30,12 @@
 	正确的写法是:
 	const char *s ="hello";  编译就会去检测,能够避免你去尝试修改代码段里面的内容.
 * 在函数的后面加const，表示这个函数不修改任何成员变量，意味着this是const的。声明和定义中都要加const
+
+##[mutable](http://blog.chinaunix.net/uid-174325-id-1744029.html)
+
+* 在const函数中可修改
+	* 典型应用，读写加锁，读的函数const，但是锁会变。
+
+##constexpr
+
+常量表达式（const expression）是指值不会改变并且在编译过程就能得到计算结果的表达式。

@@ -34,7 +34,7 @@ private:
 	//const int a ;
 };
 
-void main()
+void main20()
 {
 
 	int x[2] = { 1,1 };
