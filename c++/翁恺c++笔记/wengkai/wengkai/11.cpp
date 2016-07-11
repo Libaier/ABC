@@ -14,7 +14,7 @@ public:
 	int a;
 	
 };
-void main()
+void main11()
 {
 	sizeof(MyClass11);
 	MyClass11 *m = new MyClass11[10];

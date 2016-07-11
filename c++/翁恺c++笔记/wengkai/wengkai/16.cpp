@@ -12,6 +12,7 @@ public:
 	void fun(MyClass16* i){
 		cout << i->a << endl;
 	}
+	virtual void fun() = 0;
 	~MyClass16(){
 		cout << a << endl;
 	}
@@ -29,6 +30,7 @@ public:
 	void fun()
 	{
 		//fun(1);
+		cout << "2" << endl;
 	}
 };
 
@@ -39,6 +41,7 @@ void main16()
 	//int *p = &ci;//error
 	MyClass16a m;
 	m.fun();
+	//m.fun(1);
 	m.MyClass16::fun(1);
 	getchar();
 
