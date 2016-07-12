@@ -89,3 +89,8 @@
 5.只有在通过基类指针或基类引用 间接指向派生类类型时多态性才会起作用。
 
 6.因为Base类的函数c没有定义为virtual虚函数，所以Derived类的函数c是对Base::c()的重定义。
+
+###其他参考
+
+[C++重载、重写、重定义区别](http://glgjing.github.io/blog/2014/12/27/c-plus-plus-zhong-zai-,-zhong-xie-,-zhong-ding-yi-qu-bie/)
+
