@@ -58,15 +58,3 @@ public:
         return result;
     }
 };
-
-void add(int a,int b)
-{
-	a = a+b;
-}
-
-void main()
-{
-	int a = 1,b=2;
-	add(a,b);
-	printf("%d\n",a);
-}
